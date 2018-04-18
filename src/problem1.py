@@ -37,10 +37,15 @@ def run_test_problem1():
     print('--------------------------------------------------')
 
     expected = 762
-    actual = problem1([Rect(5, 10),
-                Rect(4, 3),
-                Rect(100, 7)]
-    
+    actual = problem1([Rect(5, 10), Rect(4, 3), Rect(100, 7)])
+    print('Expected:', expected)
+    print('Actual:', actual)
+
+
+    expected = 126
+    actual = problem1([Rect(10, 10), Rect(5, 5), Rect(1, 1)])
+    print('Expected:', expected)
+    print('Actual:', actual)
 
 def problem1(rectangles):
     """
@@ -63,7 +68,7 @@ def problem1(rectangles):
     length = len(rectangles)
     total_area = 0
     for k in range(length):
-        total_area += (rectangles[k].width * rectangles[k].height)
+        total_area += (rectangles[k].w * rectangles[k].h)
     return total_area
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
